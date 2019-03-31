@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in */hisat2_mm10_log; do
+for i in */hisat2_*_log; do
     frac=$(echo ${i} | cut -f 1 -d/)
     echo -e "cell\tsequencing_depth" > ${frac}/qc_metrics/sequencing_depth.txt
     echo -e "cell\tmapping_rate" > ${frac}/qc_metrics/mapping_rate.txt
