@@ -25,7 +25,7 @@ rule all:
         expand('{frac}/qc_metrics/{qc}.txt',
                frac=fractions,
                qc=['dup_level', 'mapping_rat', 'mt_content',
-                   'sequencing_depth', 'uniq_frags'])
+                   'sequencing_depth', 'uniq_frags','library_size'])
 
 rule subsample:
     input:
@@ -102,7 +102,7 @@ rule basicQc:
         expand('{frac}/qc_metrics/{qc}.txt',
                frac=fractions,
                qc=['dup_level', 'mapping_rat', 'mt_content',
-                   'sequencing_depth', 'uniq_frags'])
+                   'sequencing_depth', 'uniq_frags','library_size'])
     shell:
         ''' scripts/get_dup_level.sh
             scripts/get_depth_mr.sh
