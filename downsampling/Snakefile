@@ -107,4 +107,5 @@ rule basicQc:
         ''' scripts/get_dup_level.sh
             scripts/get_depth_mr.sh
             scripts/get_ufrags_mt.sh
+            scripts/get_lib_size.sh
         '''
