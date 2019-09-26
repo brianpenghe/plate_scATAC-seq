@@ -1,6 +1,7 @@
 #!/bin/sh
 #PlateTo10XFastq ../fastqFolder unfiltered_barcodes.tsv
 #This script is designed by krzysztof polański and Peng He to convert paired-end plate-based ATAC-seq fastq reads into cellranger-compatible format
+#unfiltered_barcodes.tsv should be a cell barcode file from a cellranger-ATAC output folder
 
 count=1
 for FID in $1/*R1.fastq
